@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    
+    System.out.println("Enter an integer:  ");
+    Scanner sc = new Scanner(System.in);
+    int a = Integer.parseInt(sc.nextLine());
+    int result = fact(a);
+    System.out.println("The factorial of"+ a + " is: "+ result);
+    
+  }
+
+  public static int fact(int n){
+    int f;
+    if(n==1)
+      f=1;
+    else
+      f = n * fact(n-1);
+    return f;
+    }
+}
