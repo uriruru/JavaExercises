@@ -1,3 +1,18 @@
+Mars’ gravity is about 38% of Earth’s. Write a program that will calculate your weight on Mars.
+
+Declare all variables at the top of the class.
+Initial variables are to be of float type.
+After making the calculations, assign the result to a new variable, this time of the double type.
+After assigning the assignment, write the variable double to the console, limiting its length to 4 decimal places.
+Cast the above variable of double type to a new variable of int type.
+Cast the above variable of type int to a new variable of type char.
+Do any math operation on this variable char type and assign the value of this activity to the new variable int type.
+Each of the above actions should be written to the console, adding some text explaining what has been done.
+
+
+
+
+
 import java.util.Scanner;  
 
 class Main {
