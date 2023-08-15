@@ -1,0 +1,56 @@
+The user enters his height (in inches) and weight (in pounds). The variables passed by the user are assigned to the float type. 
+After calculating the BMI value, the value will be assigned to the appropriate range and the correct message will appear on the console. 
+You can use the if-else-if ladder for printing the message on the console.
+
+Intervals of BMI index:
+
+16.00 or less = starvation
+16.00-16.99 = emaciation
+17.00-18.49 = underweight
+18.50-22.99 = normal, low range
+23.00-24.99 = normal high range
+25.00-27.49 = overweight low range
+27.50-29.99 = overweight high range
+30.00-34.99 = 1st degree obesity
+35.00-39.99 = 2nd degree obesity
+40.00 or above = 3rd degree obesity
+
+
+
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    float height, weight, bmi;
+    Scanner s = new Scanner(System.in);
+    System.out.println("Enter the height (in inches): ");
+    height = s.nextFloat();
+    System.out.println("Enter the weight (in pounds): ");
+    weight = s.nextFloat();
+    bmi = (float)(weight / Math.pow(height, 2) * 703);
+
+    System.out.println("The BMI is: "+bmi);
+
+    if(bmi<16.00)
+      System.out.println("starvation");
+    else if(bmi>=16.00 && bmi <= 16.99)
+      System.out.println("emaciation");
+    else if(bmi>=17.00 && bmi <= 18.49)
+      System.out.println("underweight");
+    else if(bmi>=18.50 && bmi<=22.99)
+      System.out.println("normal, low range");
+    else if(bmi>=23.00 && bmi<=24.99)
+      System.out.println("normal, high range");
+    else if(bmi>=25.00 && bmi<=27.49)
+      System.out.println("overweight, low range");
+    else if(bmi>=27.50 && bmi<=29.99)
+      System.out.println("overweight, high range");
+    else if(bmi>=30.00 && bmi<=34.9)
+      System.out.println("1st degree obesity");
+    else if(bmi>=35.00 && bmi<=39.90)
+      System.out.println("2nd degree obesity");
+    else
+      System.out.println("3rd degree obesity");
+  
+    }
+}
